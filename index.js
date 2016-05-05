@@ -8,23 +8,20 @@ import React, {
   TouchableOpacity,
 } from 'react-native'
 
+const styleType = PropTypes.oneOfType([
+  PropTypes.number,
+  PropTypes.object,
+  PropTypes.array,
+])
+
 export default class Button extends Component {
 
   static propTypes = {
     ...TouchableOpacity.propTypes,
     disabledActiveOpacity: PropTypes.number,
-    disabledStyle: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.object,
-    ]),
-    disabledTextStyle: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.object,
-    ]),
-    textStyle: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.object,
-    ]),
+    disabledStyle: styleType,
+    disabledTextStyle: styleType,
+    textStyle: styleType,
   }
 
   defaultProps = {
@@ -48,13 +45,13 @@ export default class Button extends Component {
     } = this.props
 
     if (disabled) {
-      if (disabledStyle) {
+      if (disabledStyle != null) {
         style = disabledStyle
       }
-      if (disabledTextStyle) {
+      if (disabledTextStyle != null) {
         textStyle = disabledTextStyle
       }
-      if (typeof disabledActiveOpacity === 'number') {
+      if (disabledActiveOpacity != null) {
         activeOpacity = disabledActiveOpacity
       }
     }
