@@ -1,0 +1,24 @@
+{
+  "name": "react-native-pure-button",
+  "version": "1.0.0",
+  "description": "react native button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musicode/react-native-pure-button.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "button"
+  ],
+  "author": "musicode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musicode/react-native-pure-button/issues"
+  },
+  "homepage": "https://github.com/musicode/react-native-pure-button#readme"
+}
