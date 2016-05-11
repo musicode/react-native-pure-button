@@ -63,7 +63,7 @@ export default class Button extends Component {
         </Text>
       )
     }
-    else if (children.length > 1) {
+    else if (children && children.length > 1) {
       children = (
         <View style={{flex: 1}}>
           {children}
