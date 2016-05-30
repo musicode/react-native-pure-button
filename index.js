@@ -2,10 +2,10 @@
 
 import React, {
   Component,
+  PropTypes,
 } from 'react'
 
 import {
-  PropTypes,
   View,
   Text,
   TouchableOpacity,
