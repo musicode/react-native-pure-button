@@ -17,17 +17,22 @@ const styleType = PropTypes.oneOfType([
   PropTypes.array,
 ])
 
+let textPropTypes = Text.propTypes
+let touchablePropTypes = TouchableOpacity.propTypes
+
 export default class Button extends Component {
 
   static propTypes = {
-    ...TouchableOpacity.propTypes,
-    disabledActiveOpacity: PropTypes.number,
+    ...touchablePropTypes,
+    disabledActiveOpacity: touchablePropTypes.activeOpacity,
     disabledStyle: styleType,
     disabledTextStyle: styleType,
     textStyle: styleType,
+    numberOfLines: textPropTypes.numberOfLines,
   }
 
   defaultProps = {
+    numberOfLines: 1,
     activeOpacity: 0.6,
     disabledActiveOpacity: 1,
   }
@@ -37,6 +42,7 @@ export default class Button extends Component {
     let {
       children,
       disabled,
+      numberOfLines,
 
       style,
       textStyle,
@@ -61,7 +67,10 @@ export default class Button extends Component {
 
     if (typeof children === 'string') {
       children = (
-        <Text style={textStyle}>
+        <Text
+          style={textStyle}
+          numberOfLines={numberOfLines}
+        >
           {children}
         </Text>
       )
