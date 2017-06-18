@@ -31,7 +31,7 @@ export default class Button extends Component {
     numberOfLines: textPropTypes.numberOfLines,
   }
 
-  defaultProps = {
+  static defaultProps = {
     numberOfLines: 1,
     activeOpacity: 0.6,
     disabledActiveOpacity: 1,
