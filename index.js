@@ -2,7 +2,6 @@
 
 import React, {
   Component,
-  PropTypes,
 } from 'react'
 
 import {
@@ -10,6 +9,8 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native'
+
+import PropTypes from 'prop-types'
 
 const styleType = PropTypes.oneOfType([
   PropTypes.number,
@@ -65,7 +66,9 @@ export default class Button extends Component {
       }
     }
 
-    if (typeof children === 'string') {
+    if (typeof children === 'string'
+      || typeof children === 'number'
+    ) {
       children = (
         <Text
           style={textStyle}
