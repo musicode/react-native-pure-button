@@ -7,6 +7,7 @@ import React, {
 import {
   View,
   Text,
+  Platform,
   TouchableOpacity,
 } from 'react-native'
 
@@ -20,6 +21,14 @@ const styleType = PropTypes.oneOfType([
 
 let textPropTypes = Text.propTypes
 let touchablePropTypes = TouchableOpacity.propTypes
+
+let extraTextStyle = null
+
+if (Platform.OS === 'ios') {
+  extraTextStyle = {
+    fontFamily: 'PingFangSC-Regular'
+  }
+}
 
 export default class Button extends Component {
 
@@ -53,6 +62,18 @@ export default class Button extends Component {
       disabledTextStyle,
       disabledActiveOpacity,
     } = this.props
+
+    if (extraTextStyle) {
+      if (textStyle) {
+        textStyle = [
+          extraTextStyle,
+          textStyle
+        ]
+      }
+      else {
+        textStyle = extraTextStyle
+      }
+    }
 
     if (disabled) {
       if (disabledStyle != null) {
