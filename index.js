@@ -81,6 +81,12 @@ export default class Button extends Component {
       }
       if (disabledTextStyle != null) {
         textStyle = disabledTextStyle
+        if (extraTextStyle) {
+          textStyle = [
+            extraTextStyle,
+            textStyle
+          ]
+        }
       }
       if (disabledActiveOpacity != null) {
         activeOpacity = disabledActiveOpacity
