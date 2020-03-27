@@ -19,8 +19,8 @@ const styleType = PropTypes.oneOfType([
   PropTypes.array,
 ])
 
-let textPropTypes = Text.propTypes
-let touchablePropTypes = TouchableOpacity.propTypes
+// let textPropTypes = Text.propTypes
+// let touchablePropTypes = TouchableOpacity.propTypes
 
 let extraTextStyle = null
 
@@ -32,14 +32,14 @@ if (Platform.OS === 'ios') {
 
 export default class Button extends PureComponent {
 
-  static propTypes = {
-    ...touchablePropTypes,
-    disabledActiveOpacity: touchablePropTypes.activeOpacity,
-    disabledStyle: styleType,
-    disabledTextStyle: styleType,
-    textStyle: styleType,
-    numberOfLines: textPropTypes.numberOfLines,
-  }
+  // static propTypes = {
+  //   ...touchablePropTypes,
+  //   disabledActiveOpacity: touchablePropTypes.activeOpacity,
+  //   disabledStyle: styleType,
+  //   disabledTextStyle: styleType,
+  //   textStyle: styleType,
+  //   numberOfLines: textPropTypes.numberOfLines,
+  // }
 
   static defaultProps = {
     numberOfLines: 1,
