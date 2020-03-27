@@ -1,7 +1,7 @@
 'use strict'
 
 import React, {
-  Component,
+  PureComponent,
 } from 'react'
 
 import {
@@ -30,7 +30,7 @@ if (Platform.OS === 'ios') {
   }
 }
 
-export default class Button extends Component {
+export default class Button extends PureComponent {
 
   static propTypes = {
     ...touchablePropTypes,
