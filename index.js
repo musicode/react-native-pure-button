@@ -13,11 +13,11 @@ import {
 
 import PropTypes from 'prop-types'
 
-const styleType = PropTypes.oneOfType([
-  PropTypes.number,
-  PropTypes.object,
-  PropTypes.array,
-])
+// const styleType = PropTypes.oneOfType([
+//   PropTypes.number,
+//   PropTypes.object,
+//   PropTypes.array,
+// ])
 
 // let textPropTypes = Text.propTypes
 // let touchablePropTypes = TouchableOpacity.propTypes

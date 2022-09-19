@@ -1,6 +1,6 @@
 {
   "name": "react-native-pure-button",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "react native button",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/musicode/react-native-pure-button#readme",
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.8.1"
   }
 }
